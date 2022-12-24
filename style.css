@@ -5,6 +5,8 @@
     /* Colors */
     --clr-primary: #99823D;
     --clr-secondary: #141414;
+    --clr-gray-300: #3D3D3D;
+    --clr-gray-100: #141414;
     --clr-white: #fff;
     --clr-black: #000;
     --clr-milky: #EBEBEB;
@@ -38,6 +40,10 @@ body {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+button {
+    cursor: pointer;
 }
 
 #home {
@@ -347,7 +353,7 @@ h2.number::after {
 
 
 #services {
-    margin-block: 2rem;
+    margin-block: 2rem 6.275rem;
     width: 80%;
     margin-inline: auto;
 }
@@ -419,4 +425,123 @@ h2.number::after {
     padding: 1.5rem 7.5rem;
     border: 0;
     cursor: pointer;
+}
+
+
+#contact {
+    padding-block-start: 3rem;
+    background-color: var(--clr-milky);
+    position: relative;
+}
+
+
+.partners {
+    display: flex;
+    justify-content: space-evenly;
+    margin-block-end: 8.375rem;
+}
+
+.partner {
+    position: relative;
+}
+
+.partner::after {
+    content: "";
+    position: absolute;
+    width: 9px;
+    aspect-ratio: 1;
+    background: var(--clr-primary);
+    top: 50%;
+    translate: 0 -50%;
+    right: -38%;
+}
+
+
+.partner:last-child::after {
+    display: none;
+}
+
+nav.footer-nav {
+    background-color: var(--clr-gray-300);
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    padding: 3rem;
+    padding-block-end: 4rem;
+    z-index: 1;
+}
+
+ul.navigation {
+    display: flex;
+    list-style: none;
+    text-transform: uppercase;
+    color: var(--clr-white);
+    line-height: 34px;
+    letter-spacing: 2.76px;
+    font-size: 11px;
+    gap: 2rem;
+}
+
+.user-feedback {
+    position: absolute;
+    left: 50%;
+    translate: -50%;
+    bottom: 0;
+    display: flex;
+    gap: 1rem;
+    width: 83%;
+    margin: auto;
+    padding: 2rem;
+    margin-block-start: -4rem;
+    background-color: var(--clr-primary);
+    z-index: 2;
+}
+
+.user-feedback > input {
+    font-size: 11px;
+    padding: .5rem 2rem;
+    width: 100%;
+    border: 0;
+    height: 3rem;
+    letter-spacing: 2.76px;
+    outline: none;
+    text-transform: uppercase;
+}
+
+.user-feedback > button.secondary {
+    font-size: 11px;
+    color: var(--clr-white);
+    border: 0;
+    padding-inline: 2.25rem;
+    text-transform: uppercase;
+    letter-spacing: 2.76px;
+}
+
+.signature {
+    height: 3rem;
+    position: relative;
+}
+
+.sign {
+    display: flex;
+    list-style: none;
+    padding: 4rem 6.3rem 1rem;
+    width: 100%;
+    font-size: 11px;
+    text-transform: uppercase;
+    background-color: var(--clr-gray-100);
+    color: var(--clr-white);
+    letter-spacing: 2.76px;
+    justify-content: space-between;
+}
+
+.stack.left {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.stack.right a {
+    font-weight: bold;
 }
