@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Teko&display=swap');
+
+
+:root {
+    /* Colors */
+    --clr-primary: #99823D;
+    --clr-secondary: #141414;
+    --clr-white: #fff;
+    --clr-black: #000;
+    --clr-milky: #EBEBEB;
+    /* Font */
+
+    --ff-open-sans: 'Open Sans', sans-serif;
+    --ff-teko: 'Teko', sans-serif;
+
+    --fw-400: 400;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: inherit;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: var(--ff-open-sans);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#home {
+    background: var(--clr-secondary);
+
+}
+
+#home > main {
+    width: 90%;
+    margin: auto;
+
+}
+
+.logo {
+    position: absolute;
+    inset: 0 auto auto 0;
+    display: inline-block;
+    padding: 2rem;
+    background: var(--clr-primary);
+}
+
+.arch {
+    font-size: 9px;
+}
+
+.made-with {
+    display: inline-flex;
+    margin-left: 25%;
+    gap: 10px;
+    font-size: 10px;
+    color: var(--clr-white);
+}
+
+
+.navbar {
+    display: grid;
+    place-items: center;
+    gap: 6%;
+    height: 68px;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+}
+
+nav.bar {
+    display: inline-block;
+    margin-left: 5%;
+}
+
+nav.bar > ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    text-transform: uppercase;
+    color: var(--clr-white);
+    
+}
+
+
+.bg-image {
+    max-width: 978px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.intro-box {
+    position: absolute;
+    background: var(--clr-white);
+    padding: 3rem;
+    right: 3rem;
+    top: 9rem;
+    max-width: 584px;
+    box-shadow: 163px 260px 0 -46px var(--clr-primary);
+}
+
+.label {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: var(--clr-primary);
+    letter-spacing: 3px;
+    line-height: 17px;
+}
+
+.motto {
+    font-family: var(--ff-teko);
+    text-transform: capitalize;
+}
+
+.intro-box > .motto {
+    font-size: 67px;
+}
+
+.intro-description {
+    margin-block: 1rem;
+}
+
+.intro-box > .button-group {
+    width: 100%;
+    display: flex;
+    height: 68px;
+    gap: 1rem;
+}
+
+.intro-box button {
+    width: 50%;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--clr-white);
+    border: 0;
+    cursor: pointer;
+}
+
+button.primary {
+    background-color: var(--clr-primary);
+}
+
+button.secondary {
+    background-color: var(--clr-secondary);
+}
+
+.social-box {
+    height: 68px;
+}
+
+.social-media {
+    margin-block-start: -10px;
+    display: flex;
+    background-color: var(--clr-milky);
+    list-style: none;
+    height: 100%;
+    gap: 2rem;
+    text-transform: uppercase;
+    align-items: center;
+    letter-spacing: 3px;
+}
+
+.social-media > li {
+    font-size: 12px;
+}
+
+#about {
+    width: 85%;
+    margin: auto;
+    padding-block: 8rem;
+    box-shadow: 0 0 0 100vmax var(--clr-milky);
+    clip-path: inset(0 -100vmax);
+    background: var(--clr-milky);
+}
+
+#about .motto {
+    font-size: 53px;
+    line-height: 52.96px;
+}
+
+#about > main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 6.25rem;
+    row-gap: 4rem;
+}
+
+.about {
+    width: 42.75rem;
+}
+
+.about p {
+    margin-block: 1rem;
+}
+
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.news {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+
+.news .name {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.news time {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: var(--clr-primary);
+    letter-spacing: 2.76px;
+}
+
+.news .news-title {
+    font-size: 26px;
+    font-family: var(--ff-teko);
+    text-transform: capitalize;
+}
+
+.achievements {
+    display: flex;
+    grid-column: span 2;
+    justify-content: space-around;
+}
+
+.achievement > h2.number {
+    font-size: 59px;
+    line-height: 59px;
+    font-family: var(--ff-teko);
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+}
+
+h2.number::after {
+    position: absolute;
+    content: "";
+    background-color: var(--clr-primary);
+    width: 9px;
+    aspect-ratio: 1;
+    bottom: 50%;
+    left: 170%;
+}
+
+.achievement:last-child > h2.number::after {
+    display: none;
+}
+
+.achievement > .label {
+    text-align: center;
+}
