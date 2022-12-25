@@ -51,7 +51,7 @@
 
     </div>
     <div id="about">
-        <main>
+        
             <div class="about">
                 <h5 class="label">about us</h5>
                 <h2 class="motto">it's our job to make your home feel like it belongs to you</h2>
@@ -82,25 +82,27 @@
                     <h2 class="number">500k</h2>
                     <h5 class="label">projects</h5>
                 </div>
+                <div class="divider one"></div>
                 <div class="achievement">
                     <h2 class="number">575k</h2>
                     <h5 class="label">sketches</h5>
                 </div>
+                <div class="divider two"></div>
                 <div class="achievement">
                     <h2 class="number">250k</h2>
                     <h5 class="label">clients</h5>
                 </div>
+                <div class="divider three"></div>
                 <div class="achievement">
                     <h2 class="number">365k</h2>
                     <h5 class="label">likes</h5>
                 </div>
+                <div class="divider four"></div>
                 <div class="achievement">
                     <h2 class="number">500k</h2>
                     <h5 class="label">awads</h5>
                 </div>
             </div>
-
-        </main>
     </div>
     <div id="projects">
         <main>
@@ -211,9 +213,13 @@
         <main>
             <div class="partners">
                 <div class="partner"><object data="./assets/svg/logo-artzo.svg"></object></div>
+                <div class="divider"></div>
                 <div class="partner"><object data="./assets/svg/logo-antartica.svg"></object></div>
+                <div class="divider two hide"></div>
                 <div class="partner"><object data="./assets/svg/logo-captain.svg"></object></div>
+                <div class="divider three hide"></div>
                 <div class="partner"><object data="./assets/svg/logo-cupcakes.svg"></object></div>
+                <div class="divider"></div>
                 <div class="partner"><object data="./assets/svg/logo-choc.svg"></object></div>
             </div>
             <nav class="footer-nav">
@@ -235,13 +241,20 @@
                         <li>changelog</li>
                     </div>
                     <div class="stack right">
-                        <li>powered by <a href="https://t.me/SlimShadyII">Abdulaziz</a></li>
+                        <li>powered by <a target="_blank" href="https://t.me/SlimShadyII">Abdulaziz</a></li>
                     </div>
                 </ul>
             </div>
             <div class="user-feedback"><input type="text" placeholder='NEWSLETTER (EMTER EMAIL)'><button class="secondary">subscribe</button></div>
         </main>
     </div>
+
+    <script>
+        window.onresize = () => {
+            console.clear()
+            console.log(window.innerWidth + "px X " + window.innerHeight + "px")
+        }
+    </script>
 </body>
 
 </html>
