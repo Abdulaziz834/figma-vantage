@@ -18,7 +18,12 @@
                 <p class="made-with"><span class="arch">Architecture</span>Made with <span class="heart"><object
                             data="./assets/icons/heart.svg"></object></span></p>
                 <nav class="bar">
+                    <div class="navbar-opener">
+                        <object data="./assets/icons/hamburger.svg" class="hamburger"></object>
+                        <input type="checkbox" class="is-open">
+                    </div>
                     <ul class="navigation">
+                        <object data="./assets/icons/close.svg" class="close"></object>
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#projects">projects</a></li>
@@ -250,9 +255,11 @@
     </div>
 
     <script>
-        window.onresize = () => {
-            console.clear()
-            console.log(window.innerWidth + "px X " + window.innerHeight + "px")
+        var inp, navBar, isOpen = false;
+        inp = document.querySelector("input.is-open");
+        navBar = document.querySelector("nav.bar > ul")
+        navBar.onclick = () => {
+            inp.checked = false;
         }
     </script>
 </body>

@@ -108,9 +108,65 @@ nav.bar > ul {
     gap: 2rem;
     text-transform: uppercase;
     color: var(--clr-white);
-    
+    transition: all 300ms linear;
 }
 
+
+.navbar-opener, 
+.close {
+    display: none;
+}
+
+
+@media (max-width: 860px) {
+    .navbar {
+        justify-items: end;
+    }
+    nav.bar {
+        position: relative;
+    }
+    .navbar-opener {
+        display: block;
+    }
+    .close, .hamburger {
+        display: block;
+        width: 40px;
+        aspect-ratio: 1;
+        padding: .5rem;
+        cursor: pointer;
+    }
+
+    nav.bar > ul {
+        left: 100%;
+        top: 0;
+        position: fixed;
+        flex-direction: column;
+        background-color: var(--clr-secondary);
+        height: 100vh;
+        width: 50%;
+        align-items: center;
+        justify-content: center;
+        z-index: 100;
+    }
+    nav.bar > ul.active {
+        translate: -100% 0;
+    }
+    .close {
+        position: absolute;
+        inset: 2vw 2vw auto auto;
+        background-color: var(--clr-gray-100);
+        pointer-events: none;
+    }
+    .navbar-opener > input.is-open {
+        z-index: 1;
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+    }
+    .navbar-opener:has(input.is-open:checked) + ul.navigation {
+        translate: -100% 0;
+    }
+}
 
 .bg-image {
     max-width: 978px;
