@@ -24,8 +24,12 @@
     padding: 0;
     box-sizing: border-box;
     font: inherit;
+    
 }
 
+:where(*) {
+    font-size: clamp(.5rem, 3vw, 1rem);
+}
 
 html {
     scroll-behavior: smooth;
@@ -133,7 +137,7 @@ nav.bar > ul {
 
 
 .label {
-    font-size: 11px;
+    font-size: 11px !important;
     text-transform: uppercase;
     color: var(--clr-primary);
     letter-spacing: 3px;
@@ -146,7 +150,7 @@ nav.bar > ul {
 }
 
 .intro-box > .motto {
-    font-size: 67px;
+    font-size: clamp(1.5rem, 10vw, 67px);
 }
 
 .intro-description {
@@ -156,7 +160,6 @@ nav.bar > ul {
 .intro-box > .button-group {
     width: 100%;
     display: flex;
-    height: 68px;
     gap: 1rem;
 }
 
@@ -171,16 +174,22 @@ nav.bar > ul {
 
 button.primary {
     background-color: var(--clr-primary);
+    padding: 1rem;
 }
 
 button.secondary {
     background-color: var(--clr-secondary);
+    padding: 1rem;
 }
+
+
 
 .social-box {
     height: 68px;
     background-color: var(--clr-milky);
 }
+
+
 
 .social-media {
     margin-block-start: -10px;
@@ -193,6 +202,15 @@ button.secondary {
     letter-spacing: 3px;
 }
 
+@media (max-width: 680px) {
+    .social-media {
+        margin-block-start: 0;
+        flex-direction: column;
+    }
+    .social-box {
+        height: auto;
+    }
+}
 .social-media > li {
     font-size: 12px;
 }
@@ -251,7 +269,7 @@ button.secondary {
 }
 
 .news time {
-    font-size: 11px;
+    font-size: 11px !important;
     text-transform: uppercase;
     color: var(--clr-primary);
     letter-spacing: 2.76px;
@@ -356,7 +374,7 @@ button.secondary {
     color: var(--clr-white);
     padding: .5rem 2rem;
     text-transform: uppercase;
-    font-size: 11px;
+    font-size: 11px !important;
     letter-spacing: 2.72px;
 }
 
@@ -378,7 +396,7 @@ button.secondary {
 }
 
 .design-img > .type {
-    font-size: 11px;
+    font-size: 11px !important;
     font-family: var(--ff-open-sans);
     position: absolute;
     text-transform: uppercase;
@@ -441,7 +459,7 @@ button.secondary {
 }
 
 .service .order {
-    font-size: 11px;
+    font-size: 11px !important;
     letter-spacing: 2.76px;
     line-height: 16.58px;
     color: var(--clr-primary);
@@ -549,8 +567,12 @@ ul.navigation {
     color: var(--clr-white);
     line-height: 34px;
     letter-spacing: 2.76px;
-    font-size: 11px;
+    
     gap: 2rem;
+}
+
+ul.navigation > li * {
+    font-size: 11px !important;
 }
 
 .user-feedback {
@@ -569,7 +591,7 @@ ul.navigation {
 }
 
 .user-feedback > input {
-    font-size: 11px;
+    font-size: 11px !important;
     padding: .5rem 2rem;
     width: 100%;
     border: 0;
@@ -580,7 +602,7 @@ ul.navigation {
 }
 
 .user-feedback > button.secondary {
-    font-size: 11px;
+    font-size: 11px !important;
     color: var(--clr-white);
     border: 0;
     padding-inline: 2.25rem;
@@ -598,12 +620,27 @@ ul.navigation {
     list-style: none;
     padding: 4rem 6.3rem 1rem;
     width: 100%;
-    font-size: 11px;
     text-transform: uppercase;
     background-color: var(--clr-gray-100);
     color: var(--clr-white);
     letter-spacing: 2.76px;
     justify-content: space-between;
+}
+
+@media (max-width: 650px) {
+    .sign {
+        flex-direction: column;
+        row-gap: .5rem;
+        align-items: center;
+    }
+}
+
+.sign .stack > li {
+    font-size: 11px !important;
+}
+
+.sign .stack > li * {
+    font-size: 11px !important;
 }
 
 .stack.left {
